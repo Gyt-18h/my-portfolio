@@ -8,7 +8,13 @@ export interface Project {
   demoUrl?: string;      // 任意：デモサイトのURL
 }
 
+// 1つのスキルアイテムの型定義（名前 ＋ アイコン用識別ID）
+export interface SkillItem {
+  name: string;          // 表示名（例: "React"）
+  iconSlug: string;      // アイコン取得用ID（例: "react"）
+}
+
 export interface SkillCategory {
   categoryName: string;  // カテゴリ名
-  skills: string[];      // スキル名の配列
+  skills: SkillItem[];   // スキルオブジェクトの配列
 }

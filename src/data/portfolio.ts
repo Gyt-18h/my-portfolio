@@ -22,15 +22,48 @@ export const projectsData: Project[] = [
 
 export const skillsData: SkillCategory[] = [
   {
-    categoryName: "Frontend / Mobile",
-    skills: ["HTML","CSS","JavaScript","Next.js", "React", "TypeScript", "Tailwind CSS", "Java(Android)"],
+    categoryName: "Frontend",
+    skills: [
+      { name: "React", iconSlug: "react" },
+      { name: "TypeScript", iconSlug: "typescript" },
+      { name: "Next.js", iconSlug: "nextdotjs" },
+      { name: "Tailwind CSS", iconSlug: "tailwindcss" },
+      { name: "HTML5", iconSlug: "html5" },
+      { name: "CSS3", iconSlug: "css3" },
+      { name: "JavaScript", iconSlug: "javascript" },
+    ],
   },
   {
-    categoryName: "Backend / Database",
-    skills: ["PHP","Python", "FastAPI", "Supabase", "Firebase","PostgreSQL", "NoSQL"],
+    categoryName: "Backend",
+    skills: [
+      { name: "Python", iconSlug: "python" },
+      { name: "FastAPI", iconSlug: "fastapi" },
+      { name: "PHP", iconSlug: "php" },
+    ],
   },
   {
-    categoryName: "Security / Other",
-    skills: ["Git / GitHub", "Linux", "Docker", "セキュリティ基礎","C++(競技プログラミング)"],
+    categoryName: "Mobile",
+    skills: [
+      { name: "Android", iconSlug: "android" },
+      { name: "Java", iconSlug: "openjdk" },
+    ],
+  },
+  {
+    categoryName: "Database",
+    skills: [
+      { name: "PostgreSQL", iconSlug: "postgresql" },
+      { name: "SQLite", iconSlug: "sqlite" },
+      { name: "Supabase", iconSlug: "supabase" },
+      { name: "Firebase", iconSlug: "firebase" },
+    ],
+  },
+  {
+    categoryName: "Infra / Tools",
+    skills: [
+      { name: "Docker", iconSlug: "docker" },
+      { name: "Git", iconSlug: "git" },
+      { name: "Linux", iconSlug: "linux" },
+      { name: "C++", iconSlug: "cplusplus" },
+    ],
   },
 ];
