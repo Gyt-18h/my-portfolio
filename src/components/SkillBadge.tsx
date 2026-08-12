@@ -1,4 +1,4 @@
-// src/components/SkillBadge.tsx
+'use client';
 import { SkillCategory } from "@/types/portfolio";
 
 interface SkillBadgeProps {
@@ -20,7 +20,7 @@ export default function SkillBadge({ category }: SkillBadgeProps) {
         {category.skills.map((skill) => (
           <div
             key={skill.name}
-            className="flex flex-col items-center justify-center p-2.5 rounded-xl bg-slate-800/40 border border-slate-700/40 hover:border-sky-500/50 hover:bg-slate-800/80 transition-all group aspect-square"
+            className="flex flex-col items-center justify-center px-1 py-2 rounded-xl bg-slate-800/40 border border-slate-700/40 hover:border-sky-500/50 hover:bg-slate-800/80 transition-all group aspect-square"
           >
             {/* アイコン画像 (SkillItem の iconSlug を直接使用) */}
             <img
@@ -34,7 +34,7 @@ export default function SkillBadge({ category }: SkillBadgeProps) {
               }}
             />
             {/* スキル名 (SkillItem の name を表示) */}
-            <span className="text-[11px] font-medium text-slate-300 group-hover:text-white text-center line-clamp-1">
+            <span className="text-[10px] font-medium text-slate-300 group-hover:text-white text-center leading-tight line-clamp-1">
               {skill.name}
             </span>
           </div>
