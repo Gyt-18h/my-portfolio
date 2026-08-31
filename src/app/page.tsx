@@ -1,8 +1,9 @@
 'use client';
 import Header from "@/components/Header";
-import { projectsData, skillsData } from "@/data/portfolio";
+import { projectsData, skillsData, experienceData } from "@/data/portfolio";
 import ProjectCard from "@/components/ProjectCard";
 import SkillBadge from "@/components/SkillBadge";
+import ExperienceCard from "@/components/ExperienceCard";
 import { ExternalLink, ArrowRight } from "lucide-react";
 
 export default function Home() {
@@ -92,7 +93,7 @@ export default function Home() {
         </section>
 
         {/* 3. スキル一覧セクション */}
-        <section id="skills" className="py-16">
+        <section id="skills" className="py-16 border-b border-slate-800/80">
           <h2 className="text-2xl font-bold tracking-tight text-white mb-8 flex items-center gap-2">
             <span className="w-1.5 h-6 bg-sky-500 rounded-full"></span>
             Skills <span className="text-sky-400 text-sm font-normal font-mono">/ スキルセット</span>
@@ -101,6 +102,21 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
             {skillsData.map((category) => (
               <SkillBadge key={category.categoryName} category={category} />
+            ))}
+          </div>
+        </section>
+
+        {/* 4. 経歴・実績セクション（追加箇所） */}
+        <section id="experience" className="py-16">
+          <h2 className="text-2xl font-bold tracking-tight text-white mb-8 flex items-center gap-2">
+            <span className="w-1.5 h-6 bg-sky-500 rounded-full"></span>
+            Experience <span className="text-sky-400 text-sm font-normal font-mono">/ 経歴・実績</span>
+          </h2>
+          
+          {/* タイムラインコンポーネント */}
+          <div className="relative border-l-2 border-slate-800/80 ml-3 md:ml-4 pl-6 space-y-8">
+            {experienceData.map((exp) => (
+              <ExperienceCard key={exp.id} experience={exp} />
             ))}
           </div>
         </section>
