@@ -1,5 +1,5 @@
 // src/data/portfolio.ts
-import { Project, SkillCategory } from "@/types/portfolio";
+import { Project, SkillCategory, Experience } from "@/types/portfolio";
 
 export const projectsData: Project[] = [
   {
@@ -24,46 +24,46 @@ export const skillsData: SkillCategory[] = [
   {
     categoryName: "Frontend",
     skills: [
-      { name: "React", iconSlug: "react" },
-      { name: "TypeScript", iconSlug: "typescript" },
-      { name: "Next.js", iconSlug: "nextdotjs" },
-      { name: "TailwindCSS", iconSlug: "tailwindcss" },
-      { name: "HTML5", iconSlug: "html5" },
-      { name: "CSS", iconSlug: "css" },
-      { name: "JavaScript", iconSlug: "javascript" },
+      { name: "React", iconSlug: "react", contexts: ["hackathon", "personal"] },
+      { name: "TypeScript", iconSlug: "typescript", contexts: ["hackathon", "personal"] },
+      { name: "Next.js", iconSlug: "nextdotjs", contexts: ["personal"] },
+      { name: "TailwindCSS", iconSlug: "tailwindcss", contexts: ["hackathon", "personal"] },
+      { name: "HTML5", iconSlug: "html5", contexts: ["school","personal"] },
+      { name: "CSS", iconSlug: "css", contexts: ["school","personal"] },
+      { name: "JavaScript", iconSlug: "javascript", contexts: ["school","personal"] },
     ],
   },
   {
     categoryName: "Backend",
     skills: [
-      { name: "Python", iconSlug: "python" },
-      { name: "FastAPI", iconSlug: "fastapi" },
-      { name: "PHP", iconSlug: "php" },
+      //{ name: "Python", iconSlug: "python", contexts: ["personal"] },
+      //{ name: "FastAPI", iconSlug: "fastapi", contexts: ["personal"] },
+      { name: "PHP", iconSlug: "php", contexts: ["school"] },
     ],
   },
   {
     categoryName: "Mobile",
     skills: [
-      { name: "Android", iconSlug: "android" },
-      { name: "Java", iconSlug: "openjdk" },
+      { name: "Android", iconSlug: "android", contexts: ["school", "hackathon", "personal"] },
+      { name: "Java", iconSlug: "openjdk", contexts: ["school","hackathon", "personal"] },
+      { name: "Expo", iconSlug: "expo", contexts: ["hackathon"] },
     ],
   },
   {
     categoryName: "Database",
     skills: [
-      { name: "PostgreSQL", iconSlug: "postgresql" },
-      { name: "SQLite", iconSlug: "sqlite" },
-      { name: "Supabase", iconSlug: "supabase" },
-      { name: "Firebase", iconSlug: "firebase" },
+      { name: "Supabase", iconSlug: "supabase", contexts: ["personal"] },
+      { name: "Firebase", iconSlug: "firebase", contexts: ["school"] },
     ],
   },
   {
     categoryName: "Infra / Tools",
     skills: [
-      { name: "Docker", iconSlug: "docker" },
-      { name: "Git", iconSlug: "git" },
-      { name: "Linux", iconSlug: "linux" },
-      { name: "C++", iconSlug: "cplusplus" },
+      { name: "XAMPP", iconSlug: "xampp", contexts: ["school"] },
+      //{ name: "Docker", iconSlug: "docker", contexts: ["personal"] },
+      { name: "Git", iconSlug: "git", contexts: ["hackathon", "personal"] },
+      { name: "Linux", iconSlug: "linux", contexts: ["school", "personal"] },
+      { name: "C++", iconSlug: "cplusplus", contexts: ["personal"] },
     ],
   },
 ];
@@ -75,7 +75,7 @@ export const experienceData: Experience[] = [
     title: "セキュリティキャンプミニ",
     role: "選抜参加者",
     category: "実績",
-    description: "IPA主催セキュリティキャンプミニ愛知に参加。サイバー犯罪の現状と低レイヤ領域の学習",
+    description: "IPA主催セキュリティキャンプミニ愛知に参加。サイバー犯罪の現状と低レイヤ領域の学習。",
     tags: ["サイバー犯罪","セキュリティ", "Java", "バイトコード","２次元コードリーダー"],
   },
   {

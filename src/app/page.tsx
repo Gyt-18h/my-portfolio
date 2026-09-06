@@ -1,12 +1,24 @@
 'use client';
+import { useState } from "react";
 import Header from "@/components/Header";
 import { projectsData, skillsData, experienceData } from "@/data/portfolio";
 import ProjectCard from "@/components/ProjectCard";
 import SkillBadge from "@/components/SkillBadge";
 import ExperienceCard from "@/components/ExperienceCard";
 import { ExternalLink, ArrowRight } from "lucide-react";
+import { SkillContext } from "@/types/portfolio";
 
 export default function Home() {
+  // タブの状態管理 ('all' | 'school' | 'hackathon' | 'personal')
+  const [activeTab, setActiveTab] = useState<'all' | SkillContext>('all');
+
+  const tabs: { id: 'all' | SkillContext; label: string }[] = [
+    { id: 'all', label: 'すべて' },
+    { id: 'school', label: '学校' },
+    { id: 'hackathon', label: 'ハッカソン' },
+    { id: 'personal', label: '個人開発' },
+  ];
+
   return (
     <div className="min-h-screen bg-[#070a13] text-slate-100 selection:bg-sky-500 selection:text-white">
       {/* 画面上部の固定ヘッダー */}
@@ -59,7 +71,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* 右側：PC・スマホのビジュアル枠（画面全体幅に合わせてワイド表示） */}
+          {/* 右側：PC・スマホのビジュアル枠 */}
           <div className="hidden lg:col-span-5 lg:flex relative justify-center items-center">
             <div className="absolute w-96 h-96 bg-gradient-to-tr from-purple-600/30 via-sky-500/20 to-indigo-500/30 rounded-full blur-3xl -z-10 animate-pulse" />
             
@@ -86,7 +98,6 @@ export default function Home() {
               Projects <span className="text-sky-400 text-sm sm:text-base font-normal font-mono">/ 制作実績</span>
             </h2>
           </div>
-          {/* フル幅の画面に合わせて2カラムでワイドに表示 */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {projectsData.map((project) => (
               <ProjectCard key={project.id} project={project} />
@@ -94,15 +105,40 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 3. スキル一覧セクション */}
+        {/* 3. スキル一覧セクション (タブ切り替え機能付き) */}
         <section id="skills" className="py-20 border-b border-slate-800/80">
-          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-white mb-10 flex items-center gap-3">
-            <span className="w-2 h-7 bg-sky-500 rounded-full"></span>
-            Skills <span className="text-sky-400 text-sm sm:text-base font-normal font-mono">/ スキルセット</span>
-          </h2>
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-10">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-white flex items-center gap-3">
+              <span className="w-2 h-7 bg-sky-500 rounded-full"></span>
+              Skills <span className="text-sky-400 text-sm sm:text-base font-normal font-mono">/ スキルセット</span>
+            </h2>
+
+            {/* タブ切り替えボタン群 */}
+            <div className="flex items-center gap-1 p-1 bg-slate-900/80 border border-slate-800 rounded-xl self-start md:self-auto">
+              {tabs.map((tab) => (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveTab(tab.id)}
+                  className={`px-3.5 py-1.5 rounded-lg text-xs font-medium transition-all ${
+                    activeTab === tab.id
+                      ? 'bg-sky-500 text-white shadow-md shadow-sky-500/20'
+                      : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/50'
+                  }`}
+                >
+                  {tab.label}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* スキルカード一覧 */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
             {skillsData.map((category) => (
-              <SkillBadge key={category.categoryName} category={category} />
+              <SkillBadge
+                key={category.categoryName}
+                category={category}
+                activeTab={activeTab}
+              />
             ))}
           </div>
         </section>

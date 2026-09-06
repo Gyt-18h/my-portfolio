@@ -8,9 +8,13 @@ export interface Project {
   demoUrl?: string;      // 任意：デモサイトのURL
 }
 
+// 追加: スキルを使用・学んだ環境
+export type SkillContext = 'school' | 'hackathon' | 'personal';
+
 export interface SkillItem {
   name: string;          // 表示名（例: "React"）
   iconSlug: string;      // アイコン取得用ID（例: "react"）
+  contexts: SkillContext[]; // 追加: 利用シーンの配列（例: ["school", "hackathon"]）
 }
 
 export interface SkillCategory {
