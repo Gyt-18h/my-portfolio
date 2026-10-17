@@ -1,14 +1,27 @@
+export interface ProjectMedia {
+  type: 'image' | 'video';
+  url: string;
+  alt?: string;
+}
+
+export interface RelatedLink {
+  label: string; // 表示ラベル (例: "GitHub", "Demo", "Qiita", "Slide")
+  url: string;   // 遷移先URL
+  type?: 'github' | 'demo' | 'article' | 'external' | 'topaz' ; // アイコン判定用
+}
+
 export interface Project {
   id: string;            // 識別用ID
   title: string;         // プロジェクト名
   description: string;   // 説明文
   category: '個人開発' | 'ハッカソン' | '学校'; // カテゴリ
+  platform?: string[];   //プラットフォーム
   tags: string[];        // 使用技術の配列
-  githubUrl: string;     // GitHubのURL
-  demoUrl?: string;      // 任意：デモサイトのURL
+  githubUrl?: string;     // GitHubのURL
+  relatedLinks?: RelatedLink[]; //関連リンク
+  mediaList?: ProjectMedia[]; //写真や動画
 }
 
-// 追加: スキルを使用・学んだ環境
 export type SkillContext = 'school' | 'hackathon' | 'personal';
 
 export interface SkillItem {
@@ -27,7 +40,7 @@ export interface Experience {
   period: string;        // 期間・日付（例: "yyyy.mm.dd - yyyy.mm.dd"）
   title: string;         // タイトル・主な取り組み
   role: string;          // 役割・区分（例: "個人開発", "選抜参加者", "資格合格"）
-  category: '開発' | '実績' | '資格' | '学歴'; // カテゴリ
+  category: string[];    // カテゴリ（例; '開発' | '実績' | '資格' | '学歴'）
   description: string;   // 詳細説明文
   tags: string[];        // 関連技術・キーワードの配列
 }
