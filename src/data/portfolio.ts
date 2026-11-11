@@ -54,6 +54,7 @@ export const projectsData: Project[] = [
     description: "地図が無い歩いた奇跡だけ記録する散歩アプリ。",
     category: "ハッカソン",
     platform: ["Android / IOS"],
+    award: "サポーターズ賞",
     tags: ["ReactNative","TypeScript","TailwindCSS","FastAPI"],
     githubUrl: "https://github.com/East-Instant/walking-App",
   },

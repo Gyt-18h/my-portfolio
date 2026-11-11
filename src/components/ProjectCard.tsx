@@ -18,14 +18,14 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       <div>
         {/* ヘッダーエリア（バッジ ＋ 右上リンク） */}
         <div className="flex items-center justify-between mb-4">
-          {/* バッジ表示エリア (カテゴリ + プラットフォーム複数) */}
+          {/* バッジ表示エリア (カテゴリ + プラットフォーム複数 + 受賞名) */}
           <div className="flex flex-wrap items-center gap-1.5">
-            {/* カテゴリバッジ */}
+            {/* ① カテゴリバッジ（水色） */}
             <span className="text-xs font-medium text-sky-400 bg-sky-500/10 px-2.5 py-1 rounded-full border border-sky-500/20">
               {project.category}
             </span>
 
-            {/* プラットフォームバッジ（複数対応：配列をループ表示） */}
+            {/* ② プラットフォームバッジ（紫） */}
             {project.platform?.map((plat) => (
               <span
                 key={plat}
@@ -34,6 +34,13 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                 {plat}
               </span>
             ))}
+
+            {/* ③ 受賞名バッジ（Android / iOS の横に黄色で表示） */}
+            {project.award && (
+              <span className="text-xs font-medium text-amber-300 bg-amber-500/10 px-2.5 py-1 rounded-full border border-amber-500/20">
+                {project.award}
+              </span>
+            )}
           </div>
 
           {/* 関連リンク表示エリア（GitHub、Topaz、ProtoPedia、デモ、記事など複数対応） */}

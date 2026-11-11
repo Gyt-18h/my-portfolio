@@ -20,6 +20,7 @@ export interface Project {
   githubUrl?: string;     // GitHubのURL
   relatedLinks?: RelatedLink[]; //関連リンク
   mediaList?: ProjectMedia[]; //写真や動画
+  award?: string; //受賞
 }
 
 export type SkillContext = 'school' | 'hackathon' | 'personal';
