@@ -36,7 +36,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             ))}
           </div>
 
-          {/* 関連リンク表示エリア（GitHub、Topaz、デモ、記事など複数対応） */}
+          {/* 関連リンク表示エリア（GitHub、Topaz、ProtoPedia、デモ、記事など複数対応） */}
           {links.length > 0 && (
             <div className="flex items-center gap-2.5">
               {links.map((link) => (
@@ -66,8 +66,20 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                         d="M6 3h12l4 6-10 12L2 9l4-6z"
                       />
                     </svg>
+                  ) : link.type === "protopedia" ? (
+                    /* ③ ProtoPedia用（「P」モチーフアイコン） */
+                    <svg
+                      className="w-4 h-4 stroke-current fill-none stroke-2"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M7 4h6a4 4 0 010 8H7V4zm0 8v8"
+                      />
+                    </svg>
                   ) : (
-                    /* ③ 汎用外部リンク / デモ / 記事用アイコン */
+                    /* ④ 汎用外部リンク / デモ / 記事用アイコン */
                     <svg
                       className="w-4 h-4 stroke-current fill-none stroke-2"
                       viewBox="0 0 24 24"

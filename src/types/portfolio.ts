@@ -7,7 +7,7 @@ export interface ProjectMedia {
 export interface RelatedLink {
   label: string; // 表示ラベル (例: "GitHub", "Demo", "Qiita", "Slide")
   url: string;   // 遷移先URL
-  type?: 'github' | 'demo' | 'article' | 'external' | 'topaz' ; // アイコン判定用
+  type?: 'github' | 'demo' | 'article' | 'external' | 'topaz' | 'protopedia' ; // アイコン判定用
 }
 
 export interface Project {

@@ -18,6 +18,7 @@ export const projectsData: Project[] = [
     category: "学校",
     platform: ["Android"],
     tags: ["Java"],
+    relatedLinks: [{ label: "ProtoPedia", url: "https://protopedia.net/prototype/9007", type: "protopedia" },]
   },
   {
     id: "weather-wise",
@@ -26,6 +27,7 @@ export const projectsData: Project[] = [
     category: "学校",
     platform: ["Android"],
     tags: ["Java"],
+    relatedLinks: [{ label: "ProtoPedia", url: "https://protopedia.net/prototype/9136", type: "protopedia" },]
   },
   {
     id: "secret-frontier",
