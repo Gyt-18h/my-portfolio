@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Project } from "@/types/portfolio";
 
 interface ProjectCardProps {
@@ -13,9 +14,25 @@ export default function ProjectCard({ project }: ProjectCardProps) {
     ...(project.relatedLinks || []),
   ];
 
+  // 先頭のモック画像を取得
+  const thumbnail = project.mediaList?.[0];
+
   return (
     <div className="group relative rounded-2xl border border-slate-800 bg-slate-900/50 p-6 backdrop-blur-md transition-all duration-300 hover:border-sky-500/50 hover:shadow-lg hover:shadow-sky-500/10 flex flex-col justify-between h-full">
       <div>
+        {/* モック画像表示エリア（16:9固定・設定されている場合のみ一番上に表示） */}
+        {thumbnail && thumbnail.type === "image" && (
+          <div className="relative w-full aspect-video mb-5 overflow-hidden rounded-xl border border-slate-800/80 bg-slate-950">
+            <Image
+              src={thumbnail.url}
+              alt={thumbnail.alt || `${project.title} モックアップ`}
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          </div>
+        )}
+
         {/* ヘッダーエリア（バッジ ＋ 右上リンク） */}
         <div className="flex items-center justify-between mb-4">
           {/* バッジ表示エリア (カテゴリ + プラットフォーム複数 + 受賞名) */}
