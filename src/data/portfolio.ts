@@ -53,7 +53,7 @@ export const projectsData: Project[] = [
   {
     id: "secret-frontier",
     title: "SecretFrontier",
-    description: "条件を選択してスマホを振ると隠れた目的地が確定。地図を一切出さず、向きに応じた「音と振動」を頼りに歩き、撮影してAIが正解を解き明かす徒歩特化型の体験・探検ナビアプリ。",
+    description: "地図は表示されず向きに応じた「音と振動」だけを頼りに隠れた目的地を探す体験型散策アプリ。",
     category: "ハッカソン",
     platform: ["Android"],
     tags: ["Java"],
@@ -86,7 +86,7 @@ export const projectsData: Project[] = [
   {
     id: "inou-network",
     title: "伊能ネットワーク",
-    description: "地図が無い歩いた奇跡だけ記録する散歩アプリ。",
+    description: "地図は無い歩いた軌跡だけ記録する散歩アプリ。",
     category: "ハッカソン",
     platform: ["Android / IOS"],
     award: "サポーターズ賞",
