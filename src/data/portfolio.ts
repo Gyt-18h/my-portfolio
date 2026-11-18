@@ -10,6 +10,13 @@ export const projectsData: Project[] = [
     platform: ["Android"],
     tags: ["Java"],
     //githubUrl: "https://github.com/Gyt-18h/BodyManager",
+    mediaList: [
+      {
+        type: "image",
+        url: "/images/projects/BodyManager.jpg",
+        alt: "BodyManager モックアップ",
+      },
+    ],
   },
   {
     id: "visual-trip",
@@ -18,7 +25,14 @@ export const projectsData: Project[] = [
     category: "学校",
     platform: ["Android"],
     tags: ["Java"],
-    relatedLinks: [{ label: "ProtoPedia", url: "https://protopedia.net/prototype/9007", type: "protopedia" },]
+    relatedLinks: [{ label: "ProtoPedia", url: "https://protopedia.net/prototype/9007", type: "protopedia" },],
+    mediaList: [
+      {
+        type: "image",
+        url: "/images/projects/VisualTrip.jpg",
+        alt: "VisualTrip モックアップ",
+      },
+    ],
   },
   {
     id: "weather-wise",
@@ -27,7 +41,14 @@ export const projectsData: Project[] = [
     category: "学校",
     platform: ["Android"],
     tags: ["Java"],
-    relatedLinks: [{ label: "ProtoPedia", url: "https://protopedia.net/prototype/9136", type: "protopedia" },]
+    relatedLinks: [{ label: "ProtoPedia", url: "https://protopedia.net/prototype/9136", type: "protopedia" },],
+    mediaList: [
+      {
+        type: "image",
+        url: "/images/projects/WeatherWise.jpg",
+        alt: "WeatherWise モックアップ",
+      },
+    ],
   },
   {
     id: "secret-frontier",
@@ -37,6 +58,13 @@ export const projectsData: Project[] = [
     platform: ["Android"],
     tags: ["Java"],
     githubUrl: "https://github.com/spajam-jp/spajam2026-2-02",
+    mediaList: [
+      {
+        type: "image",
+        url: "/images/projects/SecretFrontier.jpg",
+        alt: "SecretFrontier モックアップ",
+      },
+    ],
   },
   {
     id: "omotenashi",
@@ -46,7 +74,14 @@ export const projectsData: Project[] = [
     platform: ["Android / IOS"],
     tags: ["ReactNative","TypeScript","TailwindCSS","FastAPI"],
     githubUrl: "https://github.com/progatehackathon-26-07-kawappiramochi/omotenashi",
-    relatedLinks:[{label:"Topaz",url:"https://topaz.dev/projects/50b90b0dc5732dc3bc14",type:"topaz"}]
+    relatedLinks:[{label:"Topaz",url:"https://topaz.dev/projects/50b90b0dc5732dc3bc14",type:"topaz"}],
+    mediaList: [
+      {
+        type: "image",
+        url: "/images/projects/omotenashi.jpg",
+        alt: "omotenashi モックアップ",
+      },
+    ],
   },
   {
     id: "inou-network",
@@ -57,6 +92,13 @@ export const projectsData: Project[] = [
     award: "サポーターズ賞",
     tags: ["ReactNative","TypeScript","TailwindCSS","FastAPI"],
     githubUrl: "https://github.com/East-Instant/walking-App",
+    mediaList: [
+      {
+        type: "image",
+        url: "/images/projects/inounetwork.jpg",
+        alt: "inounetwork モックアップ",
+      },
+    ],
   },
 ];
 
