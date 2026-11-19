@@ -28,18 +28,18 @@ export default function Home() {
       <main className="w-full px-6 sm:px-12 lg:px-20 pt-24 pb-16">
         
         {/* 1. Hero / 自己紹介セクション */}
-        <section id="home" className="py-12 md:py-24 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center border-b border-slate-800/80">
+        <section id="home" className="py-12 md:py-24 border-b border-slate-800/80">
           
-          {/* 左側：テキスト & アクションボタン */}
-          <div className="lg:col-span-7 flex flex-col items-start gap-6">
+          {/* テキスト & アクションボタン */}
+          <div className="max-w-3xl flex flex-col items-start gap-6">
             <span className="text-xs font-mono text-sky-400 bg-sky-500/10 px-3 py-1.5 rounded-full border border-sky-500/20">
               セキュリティエンジニア志望 / フルスタックエンジニア
             </span>
             
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-tight">
               Hello, I'm{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-indigo-400 to-purple-400">
-                yuyu--
+              <span className="whitespace-nowrap text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-indigo-400 to-purple-400">
+                G.yt
               </span>
             </h1>
 
@@ -57,7 +57,7 @@ export default function Home() {
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>
               <a
-                href="https://github.com"
+                href="https://github.com/Gyt-18h"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3.5 rounded-xl bg-slate-900 border border-slate-700 text-slate-200 font-medium hover:bg-slate-800 hover:border-slate-600 transition-all flex items-center gap-2"
@@ -68,23 +68,6 @@ export default function Home() {
                 GitHub
                 <ExternalLink className="w-3.5 h-3.5 text-slate-400" />
               </a>
-            </div>
-          </div>
-
-          {/* 右側：PC・スマホのビジュアル枠 */}
-          <div className="hidden lg:col-span-5 lg:flex relative justify-center items-center">
-            <div className="absolute w-96 h-96 bg-gradient-to-tr from-purple-600/30 via-sky-500/20 to-indigo-500/30 rounded-full blur-3xl -z-10 animate-pulse" />
-            
-            <div className="w-full h-80 lg:h-96 bg-slate-900/60 border border-slate-800 rounded-2xl backdrop-blur-md flex flex-col items-center justify-center gap-3 p-6 text-center group hover:border-sky-500/40 transition-colors shadow-2xl">
-              <div className="w-14 h-14 rounded-2xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-400 text-2xl">
-                💻
-              </div>
-              <p className="text-slate-200 font-semibold text-base">
-                メインビジュアル（PC / スマホモックアップ）
-              </p>
-              <p className="text-slate-400 text-xs max-w-xs leading-relaxed">
-                ※ ここにラップトップとスマホの合成画像を配置します
-              </p>
             </div>
           </div>
 
