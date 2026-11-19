@@ -27,15 +27,11 @@ export default function Home() {
       {/* 画面全体の幅を100%活用する main タグ */}
       <main className="w-full px-6 sm:px-12 lg:px-20 pt-24 pb-16">
         
-        {/* 1. Hero / 自己紹介セクション */}
-        <section id="home" className="py-12 md:py-24 border-b border-slate-800/80">
+        {/* 1. Hero / 自己紹介セクション（中央配置） */}
+        <section id="home" className="py-16 md:py-28 border-b border-slate-800/80">
           
           {/* テキスト & アクションボタン */}
-          <div className="max-w-3xl flex flex-col items-start gap-6">
-            <span className="text-xs font-mono text-sky-400 bg-sky-500/10 px-3 py-1.5 rounded-full border border-sky-500/20">
-              セキュリティエンジニア志望 / フルスタックエンジニア
-            </span>
-            
+          <div className="max-w-3xl mx-auto flex flex-col items-center text-center gap-6">
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-tight">
               Hello, I'm{" "}
               <span className="whitespace-nowrap text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-indigo-400 to-purple-400">
@@ -43,12 +39,12 @@ export default function Home() {
               </span>
             </h1>
 
-            <p className="text-slate-400 text-base sm:text-lg lg:text-xl leading-relaxed">
+            <p className="max-w-2xl text-slate-400 text-base sm:text-lg lg:text-xl leading-relaxed">
               大学で情報学を学びながら、Web・Androidアプリ・バックエンドの開発に取り組んでいます。セキュリティの知識を活かし、安全で使いやすいサービスを作ることを目指しています。
             </p>
 
             {/* ボタン群 */}
-            <div className="flex flex-wrap items-center gap-4 pt-2">
+            <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
               <a
                 href="#projects"
                 className="px-6 py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-sky-500 text-white font-medium shadow-lg shadow-sky-500/20 hover:shadow-sky-500/35 hover:scale-[1.02] transition-all flex items-center gap-2 group"
